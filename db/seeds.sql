@@ -1,27 +1,34 @@
-INSERT INTO department (name, manager, manager_id)
+USE company;
+
+INSERT INTO department (name)
 VALUES
-('Sales', 'Sonia', 67),
-('Marketing', 'Elizabeth', 44),
-('HR', 'Aretha', 99);
+('Sales'),
+('Marketing'),
+('HR'),
+('Accounting');
 
-INSERT INTO roles (title, salary, department_id)
-VALUES
-
-('Inside Account Manager', 30450, 1),
-('Outside Account Manager', 31600, 1),
-('Senior Agent', 80900, 2),
-('Junior Agent', 54840, 2),
-('Assistant', 28000, 2),
-('HR Coordinator', 45700, 3),
-('Recruiter', 62500, 3);
-
-INSERT INTO employee (first_name, last_name, roles_id, manager_id)
+INSERT INTO role (title, salary, department_id)
 VALUES
 
-('Mike', 'Smith', 1, 67),
-('Manny', 'Sal', 2, 67),
-('Kiannah', 'Jones', 3, 44),
-('Lanna', 'Rugs', 4, 44),
-('Alex', 'Ross', 5, 44),
-('Maria', 'Via', 6, 99),
-('Andrea', 'Barr', 7, 99);
+('Inside Account Manager', 53000.00, 1),
+('Outside Account Manager', 58000.00, 1),
+('Senior Agent', 70000.00, 2),
+('Junior Agent', 65000.00, 2),
+('Assistant', 30000.00, 3),
+('HR Coordinator', 47000.00, 3),
+('Recruiter', 47000.00, 3);
+('CPA', 110000.00, 3);
+
+INSERT INTO employee (first_name, last_name, role_id, manager_id)
+VALUES
+
+('Lanna', 'Ruggs', 1, NULL),
+('Kiannah', 'Jones', 2, NULL),
+('Michelle', 'Sims', 3, NULL),
+('Liz', 'Lah', 4, NULL),
+('Lyn', 'Ro', 5, NULL),
+('Maggie', 'Magee', 6, NULL),
+('Steve', 'Barr', 7, NULL), 
+('Jon', 'Barr', 7, NULL),
+('Chee', 'Zits', 1, NULL),
+('Martha', 'Stew', 2, NULL);
